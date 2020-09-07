@@ -18,3 +18,12 @@ document.querySelector('.menu_toggler').onclick = function(e) {
   document.querySelector('.menu_toggler').classList.toggle('active');
   document.querySelector('.navbar-menu').classList.toggle('active');
 };
+
+links = document.querySelectorAll('.menu-link');
+
+links.forEach((link, i) => {
+  link.addEventListener('click', (e) => {
+    document.querySelector('.navbar-menu').classList.remove('active');
+    document.querySelector('.menu_toggler').classList.remove('active');
+  })
+});
