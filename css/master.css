@@ -469,6 +469,10 @@ section {
   font-size: 30px;
 }
 
+footer {
+  padding: 30px;
+}
+
 @media screen and (max-width:1020px) {
   #change-text {
     font-size: 40px;
