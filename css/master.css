@@ -231,12 +231,12 @@ section {
   margin: 15px 0;
 }
 
-.infos {
+.nv-infos {
   display: flex;
   justify-content: space-between;
 }
 
-.infos i {
+.nv-infos i {
   margin-left: 15px;
   font-size: 25px;
   color: #ffc328;
