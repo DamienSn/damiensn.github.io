@@ -231,12 +231,12 @@ section {
   margin: 15px 0;
 }
 
-.infos {
+.nv-infos {
   display: flex;
   justify-content: space-between;
 }
 
-.infos i {
+.nv-infos i {
   margin-left: 15px;
   font-size: 25px;
   color: #ffc328;
@@ -385,7 +385,7 @@ section {
 }
 
 .work {
-  width: calc(33% - 10px);
+  width: calc(50% - 10px);
   overflow: hidden;
   border-radius: 8px;
   margin: 10px 0;
