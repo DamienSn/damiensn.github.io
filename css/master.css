@@ -399,10 +399,10 @@ section {
   transition: .3s linear;
 }
 
-.work::before {
+.infos {
   content: "";
   position: absolute;
-  bottom: -100px;
+  bottom: 0px;
   width: 100%;
   height: 25%;
   z-index: 1;
@@ -410,16 +410,6 @@ section {
   transition: .2s linear;
   opacity: 0;
   transform-origin: bottom;
-}
-
-.work:hover::before {
-  opacity: 1;
-  bottom: 0;
-}
-
-.infos {
-  position: relative;
-  opacity: 0;
 }
 
 .work:hover>.infos {
@@ -433,10 +423,11 @@ section {
   left: 40px;
   color: black;
   transition: .3s linear;
+  opacity: 0;
 }
 
 .work:hover>.infos>.infos-title {
-  bottom: 45px;
+  bottom: 30%;
 }
 
 .work:hover img {
@@ -545,8 +536,13 @@ footer {
     margin-left: auto;
   }
 
-  .work {
-    width: calc(50% - 10px);
+  .infos {
+    opacity: 1;
+  }
+
+  .infos-title {
+    opacity: 1;
+    bottom: 30%;
   }
 }
 
@@ -563,4 +559,8 @@ footer {
   .work {
     width: calc(100% - 10px);
   }
+}
+
+::selection {
+  background:  #a9dbf5;
 }
