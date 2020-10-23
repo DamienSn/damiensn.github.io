@@ -385,7 +385,7 @@ section {
 }
 
 .work {
-  width: calc(50% - 10px);
+  width: calc(100% / 3 - 10px);
   overflow: hidden;
   border-radius: 8px;
   margin: 10px 0;
@@ -544,6 +544,10 @@ footer {
     opacity: 1;
     bottom: 30%;
   }
+
+  .work {
+    width: calc(100% - 10px);
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -554,10 +558,6 @@ footer {
   .service.petit {
     width: calc(100% - 20px);
     margin-bottom: 35px;
-  }
-
-  .work {
-    width: calc(100% - 10px);
   }
 }
 
