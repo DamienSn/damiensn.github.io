@@ -272,7 +272,7 @@ section {
 }
 
 .js::after {
-  width: 50%;
+  width: 55%;
 }
 
 .php::after {
@@ -280,11 +280,11 @@ section {
 }
 
 .py::after {
-  width: 25%;
+  width: 40%;
 }
 
 .sql::after {
-  width: 5%;
+  width: 15%;
 }
 
 .dark {
