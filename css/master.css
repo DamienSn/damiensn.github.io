@@ -264,7 +264,7 @@ section {
 }
 
 .html::after {
-  width: 60%;
+  width: 70%;
 }
 
 .css::after {
@@ -272,19 +272,19 @@ section {
 }
 
 .js::after {
-  width: 55%;
+  width: 65%;
 }
 
-.php::after {
-  width: 5%;
+.react::after {
+  width: 50%;
 }
 
 .py::after {
-  width: 40%;
+  width: 45%;
 }
 
-.sql::after {
-  width: 15%;
+.node-js::after {
+  width: 30%;
 }
 
 .dark {
@@ -329,7 +329,7 @@ section {
   color: #0ac30d;
 }
 
-.service .fab.fa-css3 {
+.service .fas.fa-paint-brush {
   color: #fb6d00;
 }
 
@@ -346,7 +346,7 @@ section {
 }
 
 .three:hover::after {
-  content: "Le web ne serait pas ce qu'il est sans programmes... C'est pour cela que je crée des apllications web, principalement avec JavaScript.";
+  content: "Le web ne serait pas ce qu'il est sans les scripts qui le rendent dynamiques... Je suis capable de créer des sites dynamiques, avec JavaScript";
 }
 
 .timeline, .works {
