@@ -1,0 +1,50 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: calc(33% - 20px);
+  border: 3px solid #43809f;
+  border-radius: 8px;
+  padding: 35px;
+  text-align: center;
+  transition: .3s linear;
+  cursor: pointer;
+  flex: 1 1 200px;
+  margin: 15px;
+}
+
+.service:hover {
+  background: #43809f;
+}
+
+.service i {
+  font-size: 40px;
+  margin: 15px;
+}
+
+.service .fas.fa-globe-europe {
+  color: #0ac30d;
+}
+
+.service .fas.fa-paint-brush {
+  color: #fb6d00;
+}
+
+.service .fab.fa-js-square {
+  color: #ffc328;
+}
+
+.one:hover::after {
+  content: "Je sais créer des sites qui s'adaptent à tout type d'écran 🖥. Ainsi, le site créé sera aussi accessible sur smartphones 📱 et sur tablettes que sur ordinateur 💻.";
+}
+
+.two:hover::after {
+  content: "J'aime particulièrement designer des sites sobres. Je m'appuie généralement sur une palette 🎨 de maximum six couleurs. J'adore tout ce qui touche aux effets au survol et aux animations.";
+}
+
+.three:hover::after {
+  content: "Le web ne serait pas ce qu'il est sans les scripts qui le rendent dynamiques... Je suis capable de créer des sites dynamiques, avec JavaScript";
+}

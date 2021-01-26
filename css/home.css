@@ -1,0 +1,50 @@
+#home {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url(../images/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#home .inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+#home .content {
+  width: 100%;
+  color: white;
+}
+
+#change-text {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.js {
+  color: #f7e018;
+}
+
+.css {
+  color: #1a6fb4;
+}
+
+.python {
+  color: #ffd43b;
+}
+
+#home .sharing a {
+  font-size: 25px;
+  color: #a9dbf5;
+  margin: 7px;
+  transition: .2s linear;
+}
+
+#home .sharing a:hover {
+  color: #43809f;
+  transform: scale(1.5) rotate(-35deg);
+}
