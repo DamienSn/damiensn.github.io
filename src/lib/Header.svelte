@@ -8,7 +8,7 @@
 	onMount(() => {
 		window.addEventListener('scroll', (e: UIEvent) => {
 			if (window.pageYOffset > 50) {
-				mini = 'mini';
+				mini = 'black';
 			} else {
 				mini = false;
 			}
@@ -32,20 +32,27 @@
 
 <style type="scss">
 	nav {
-		background-color: $onyx;
 		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 15px;
-		transition: 0.5s linear;
 		position: sticky;
 		top: 0;
 		left: 0;
+		padding: 15px;
+
+		background-color: $onyx;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		transition: background-color 0.5s linear;
+		// Compensation transition font-size
+		transition: margin-bottom 0.2s linear;
+		z-index: 10000;
 	}
 
-	nav.mini {
+	nav.black {
 		background-color: #2c2c2c;
+		margin-bottom: 41px;
 	}
 
 	nav ul {
@@ -77,10 +84,10 @@
 		font-size: 96px;
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 1px #f4f4f4;
-		transition: 0.2s linear;
+		transition: font-size 0.2s linear;
 	}
 
-	nav.mini span {
+	nav.black span {
 		font-size: 55px;
 	}
 </style>
