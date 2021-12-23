@@ -1,7 +1,8 @@
 <script type="ts">
-	import Fa from 'svelte-fa';
-	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { onMount } from 'svelte';
+import MenuToggler from './components/MenuToggler.svelte';
+	import Nav from './Nav.svelte';
+import NavMobile from './NavMobile.svelte';
 
 	let mini: string | false = false;
 
@@ -18,21 +19,18 @@
 
 <nav class={`${mini ? mini : ''}`}>
 	<span>DS.</span>
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#skills">Skills</a></li>
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li>
-			<a href="https://github.com/DamienSn" target="_blank"><Fa icon={faGithub} scale={2.5} /></a>
-		</li>
-	</ul>
+	<div class="nav-lg">
+		<Nav />
+	</div>
+	<div class="nav-sm">
+		<MenuToggler />
+		<NavMobile />
+	</div>
 </nav>
 
 <style type="scss">
 	nav {
-		width: 100%;
+		width: 100vw;
 		position: sticky;
 		top: 0;
 		left: 0;
@@ -47,36 +45,12 @@
 		transition: background-color 0.5s linear;
 		// Compensation transition font-size
 		transition: margin-bottom 0.2s linear;
-		z-index: 10000;
+		z-index: 999;
 	}
 
 	nav.black {
-		background-color: #2c2c2c;
+		background-color: $black;
 		margin-bottom: 41px;
-	}
-
-	nav ul {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		list-style-type: none;
-	}
-
-	nav ul li {
-		padding: 0 15px;
-	}
-
-	nav ul li:last-child {
-		padding: 0 20px;
-	}
-
-	nav ul li a {
-		text-decoration: none;
-		color: white;
-	}
-
-	nav ul li a:hover {
-		font-weight: bold;
 	}
 
 	nav span {
@@ -89,5 +63,19 @@
 
 	nav.black span {
 		font-size: 55px;
+	}
+
+	// Responsive
+	.nav-sm {
+		display: none;
+	}
+
+	@media screen and (max-width: 600px) {
+		.nav-lg {
+			display: none;
+		}
+		.nav-sm {
+			display: block;
+		}
 	}
 </style>
