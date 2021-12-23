@@ -1,23 +1,22 @@
 <script type="ts">
 	import { onMount } from 'svelte';
-import MenuToggler from './components/MenuToggler.svelte';
+	import {els} from '../store'
+	import MenuToggler from './components/MenuToggler.svelte';
 	import Nav from './Nav.svelte';
-import NavMobile from './NavMobile.svelte';
-
-	let mini: string | false = false;
+	import NavMobile from './NavMobile.svelte';
 
 	onMount(() => {
 		window.addEventListener('scroll', (e: UIEvent) => {
 			if (window.pageYOffset > 50) {
-				mini = 'black';
+				els.update(val => ({...val, header: true}))
 			} else {
-				mini = false;
+				els.update(val => ({...val, header: false}))
 			}
 		});
 	});
 </script>
 
-<nav class={`${mini ? mini : ''}`}>
+<nav class:black={$els.header} class:nav={$els.nav}>
 	<span>DS.</span>
 	<div class="nav-lg">
 		<Nav />
@@ -48,7 +47,7 @@ import NavMobile from './NavMobile.svelte';
 		z-index: 999;
 	}
 
-	nav.black {
+	nav.black, nav.nav {
 		background-color: $black;
 		margin-bottom: 41px;
 	}
@@ -61,7 +60,7 @@ import NavMobile from './NavMobile.svelte';
 		transition: font-size 0.2s linear;
 	}
 
-	nav.black span {
+	nav.black span, nav.nav span {
 		font-size: 55px;
 	}
 

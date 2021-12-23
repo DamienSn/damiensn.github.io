@@ -2,28 +2,15 @@
 	import Fa from 'svelte-fa';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
     import { onMount } from "svelte";
-
-	let btn: HTMLButtonElement;
-	let nav: HTMLElement;
-	let header: HTMLElement;
-
-	onMount(() => {
-		btn = document.querySelector(".menu-toggler");
-		header = document.querySelector('nav');
-	})
+	import {els} from '../store'
 
     function deactivateNav (): void {
-        btn.classList.toggle('active');
-		nav.classList.toggle("active");
-		header.classList.add("black");
-		if (window.pageYOffset <= 50 && !btn.classList.contains("active")) {
-			header.classList.remove("black");
-		}
+		els.update((val) => ({...val, menuToggler: !val.menuToggler, nav: !val.nav}));
     }
 
 </script>
 
-<aside class="nav-mobile active" bind:this={nav} on:click={deactivateNav}>
+<aside class="nav-mobile" class:active={$els.nav} on:click={deactivateNav}>
 	<ul>
 		<li><a href="#">Home</a></li>
 		<li><a href="#about">About</a></li>

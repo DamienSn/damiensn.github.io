@@ -1,27 +1,13 @@
 <script type="ts">
-import { onMount } from "svelte";
+	import { onMount } from 'svelte';
+	import { els } from '../../store';
 
-
-	let btn: HTMLButtonElement;
-	let nav: HTMLElement;
-	let header: HTMLElement;
-
-	onMount(() => {
-		nav = document.querySelector('aside.nav-mobile');
-		header = document.querySelector('nav');
-	})
-
-    function toggleActive(e) {
-        btn.classList.toggle('active');
-		nav.classList.toggle("active");
-		header.classList.add("black");
-		if (window.pageYOffset <= 50 && !btn.classList.contains("active")) {
-			header.classList.remove("black");
-		}
-    }
+	function toggleActive(e) {
+		els.update((val) => ({...val, menuToggler: !val.menuToggler, nav: !val.nav}));
+	}
 </script>
 
-<button class="menu-toggler active" on:click={toggleActive} bind:this={btn}>
+<button class="menu-toggler" class:active={$els.menuToggler} on:click={toggleActive}>
 	<div />
 	<div />
 	<div />
@@ -36,7 +22,7 @@ import { onMount } from "svelte";
 		display: block;
 		width: 40px;
 		height: 30px;
-        margin-right: 10px;
+		margin-right: 10px;
 
 		display: flex;
 		justify-content: center;
@@ -44,7 +30,7 @@ import { onMount } from "svelte";
 		flex-direction: column;
 
 		cursor: pointer;
-        z-index: 10000;
+		z-index: 10000;
 	}
 
 	.menu-toggler div {
