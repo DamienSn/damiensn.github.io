@@ -40,6 +40,7 @@
 
 		div {
 			width: 90%;
+			flex: 1;
 		}
 	}
 </style>
