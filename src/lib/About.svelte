@@ -5,14 +5,14 @@
 <section id="about">
 	<div class="section-title left">
 		<span />
-		<h1>About</h1>
+		<h1>À propos de moi</h1>
 		<span />
 	</div>
 
 	<div id="infos">
 		<img src="img/avatar.png" alt="Damien Stéphan's Photo" />
 		<div>
-			<h3>Code, Cycling, Student</h3>
+			<h3>Codage, Cyclisme, Lycéen</h3>
 			<p>
 				Passionné de nouvelles technologies, je me suis lancé dans le code en 2020, en débutant avec JavaScript. J'ai ensuite appris Python et le framework React JS. J'ai ensuite appris Node JS et MySQL pour pouvoir aussi développer en back-end.
 			</p>
@@ -41,6 +41,10 @@
 		div {
 			width: 90%;
 			flex: 1;
+		}
+
+		p {
+			max-width: 75%;
 		}
 	}
 </style>

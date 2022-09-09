@@ -12,7 +12,7 @@
 <style type="scss">
 	.skill-card {
 		width: 250px;
-		height: 300px;
+		height: 150px;
 		padding: 20px;
 
 		border-radius: 15px;
@@ -22,7 +22,11 @@
 		box-shadow: 6px 7px 6px 0px #2b2b2c;
 
 		img {
-			height: calc(250px / 2.5);
+			height: calc(250px / 4);
+		}
+
+		h2 {
+			font-weight: normal;
 		}
 	}
 </style>

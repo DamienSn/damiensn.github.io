@@ -5,8 +5,8 @@
 
 <section id="home">
 	<MacButtons />
-	<h1 class="home">Hello, I'm Damien</h1>
-	<Typewriter interval={60} delay={1000}><h2 class="home">> Young Web Developer</h2></Typewriter>
+	<h1 class="home">Bonjour, je suis Damien</h1>
+	<Typewriter interval={60} delay={1000}><h2 class="home">> Jeune Développeur Web</h2></Typewriter>
 	<!-- <h2 class="home terminal-cursor"><span>_</h2> -->
 
 	<div id="bg" ></div>
