@@ -39,6 +39,10 @@ h1, h2 {
     }
 }
 
+section {
+    padding: 0 40px;
+}
+
 // Section title
 .section-title {
     width: 100%;
@@ -63,4 +67,14 @@ h1, h2 {
 
 .section-title.right span:nth-child(3) {
     width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        padding: 0 15px;
+    }
+
+    .section-title h1 {
+        font-size: 2rem;
+    }
 }

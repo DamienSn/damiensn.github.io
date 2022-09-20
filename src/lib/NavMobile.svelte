@@ -12,10 +12,10 @@
 
 <aside class="nav-mobile" class:active={$els.nav} on:click={deactivateNav}>
 	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#skills">Skills</a></li>
-		<li><a href="#projects">Projects</a></li>
+		<li><a href="#">Accueil</a></li>
+		<li><a href="#about">À propos</a></li>
+		<li><a href="#skills">Compétences</a></li>
+		<li><a href="#projects">Projets</a></li>
 		<li><a href="#contact">Contact</a></li>
 		<li>
 			<a href="https://github.com/DamienSn" target="_blank"><Fa icon={faGithub} scale={2.5} /></a>

@@ -12,13 +12,13 @@ import Button from "./components/Button.svelte";
 
 	<div class="contact">
         <p>Vous avez un projet et souhaitez en discuter ? N'hésitez pas à me contacter !</p>
-        <Button><a href="mailto:damienstephan07@gmail.com">Contactez moi</a></Button>
+        <Button><a href="mailto:damienstephan07@gmail.com">M'envoyer un email</a></Button>
 	</div>
 </section>
 
 <style type="scss">
     .contact {
-        margin-left: 40px;
+        // margin-left: 40px;
         margin-bottom: 20px;
     }
 
@@ -30,5 +30,13 @@ import Button from "./components/Button.svelte";
 
     a:hover {
         color: black;
+    }
+
+    .contact p {
+        font-family: "Poppins", sans-serif;
+    }
+
+    .contact a {
+        font-family: "Poppins", sans-serif;
     }
 </style>

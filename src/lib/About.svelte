@@ -45,6 +45,13 @@
 
 		p {
 			max-width: 75%;
+			font-family: "Poppins", sans-serif;
+		}
+
+		@media screen and (max-width: 600px) {
+			p {
+				max-width: 100%;
+			}
 		}
 	}
 </style>

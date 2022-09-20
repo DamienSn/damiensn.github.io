@@ -76,5 +76,8 @@
 		.nav-sm {
 			display: block;
 		}
+		nav span {
+			font-size: 78px;
+		}
 	}
 </style>

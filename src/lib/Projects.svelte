@@ -1,15 +1,6 @@
 <script type="ts">
-	import { db } from '../firebase';
-	import { collection, getDocs } from 'firebase/firestore';
 	import ProjectCard from './ProjectCard.svelte';
 	import ProjectCardReverse from './ProjectCardReverse.svelte';
-
-	async function getProjects() {
-		const col = collection(db, 'projects');
-		const projects = await getDocs(col);
-		let docs = projects.docs.map((doc) => doc.data());
-		return docs;
-	}
 </script>
 
 <section id="projects">
@@ -33,7 +24,7 @@
 			et il est prévu d'y travailler en collaboration avec la Fédération Française de Vélo.
 		</ProjectCard>
 
-		<ProjectCardReverse
+		<ProjectCard
 			name="Vélorêveurs"
 			subtitle="Blog"
 			technos="Wordpress"
@@ -44,7 +35,7 @@
 			Le blog de ma famille pour nos voyages en vélos. Le projet utilise Wordpress, mai j'ai
 			entiérement créé le thème (cad. le design). De plus j'ai codé la partie carte, qui utilise les
 			données externes de Strava.
-		</ProjectCardReverse>
+		</ProjectCard>
 
 		<ProjectCard
 			name="Le chêne d'en Pontier"
@@ -68,5 +59,12 @@
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: 1fr;
 		grid-gap: 40px;
+		align-items: center;
+	}
+
+	@media screen and (max-width: 600px) {
+		.projects-container {
+			margin: 0;
+		}
 	}
 </style>

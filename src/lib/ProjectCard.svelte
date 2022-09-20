@@ -16,7 +16,7 @@
 	<h2>{subtitle}</h2>
 
 	<p><b>Technos : </b>{technos}</p>
-	<p><slot /></p>
+	<p class="description"><slot /></p>
 
 	<Button>
 		<a href={url} target="_blank">Voir le projet</a>
@@ -52,5 +52,35 @@
 
 	a:hover {
 		color: black;
+	}
+
+	p.description {
+		font-family: "Poppins", sans-serif;
+	}
+
+	@media screen and (max-width: 1024px) {
+		img {
+			grid-column: 1 / 4;
+		}
+		div {
+			grid-column: 4 / 7;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		img {
+			grid-column: 1 / 7;
+		}
+		div {
+			grid-column: 1 / 7;
+		}
+
+		h1 {
+			font-size: 24px;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
 	}
 </style>
