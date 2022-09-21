@@ -4,7 +4,7 @@
 </script>
 
 <section id="home">
-	<MacButtons />
+	<!-- <MacButtons /> -->
 	<h1 class="home">Bonjour, je suis <span>Damien</span></h1>
 	<Typewriter interval={60} delay={1000}><h2 class="home">> Jeune Développeur Web</h2></Typewriter>
 	<!-- <h2 class="home terminal-cursor"><span>_</h2> -->
